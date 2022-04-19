@@ -1,0 +1,37 @@
+.mid #config {
+  text-buffer: "text-anchor: middle"
+}
+
+.main {
+  layer: 1;
+}
+
+.shadow {
+  fill: #808080;
+  x: 11;
+  y: 11;
+  opacity: 0.6;
+}
+
+.med .shadow {
+  x: 5;
+  y: 5;
+}
+
+#act .shadow {
+  x: 7;
+  y: 7;
+}
+
+.small .shadow {
+  x: 3;
+  y: 3;
+}
+
+#secBig #main {   /* because <use> can't handle y>=336 */
+  y: 200;
+}
+
+#secBig #shadow {   /* because <use> can't handle y>=336 */
+  y: 211;
+}
