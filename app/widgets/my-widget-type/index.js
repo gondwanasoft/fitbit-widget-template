@@ -8,8 +8,8 @@ import { constructWidgets, parseConfig } from "../construct-widgets";
 
 const construct = (el) => {
 
-    let mainEl = el.getElementById('main');
-    let shadowEl = el.getElementById('shadow');
+    let mainEl = el.getElementById('my-widget-type-main');
+    let shadowEl = el.getElementById('my-widget-type-shadow');
     let elStyle = el.style;   // keep a reference to the REAL .style because we're going to redefine .style
 
     //APPLY CHANGES ON EL TO ALL
@@ -115,8 +115,8 @@ const construct = (el) => {
           }
         });
 
-        // DEFINES RELATIONS BETWEEN SUBTEXTELEMENTS
-        const allSubTextElements = el.getElementsByClassName('myText');
+        // DEFINES RELATIONS BETWEEN TEXT ELEMENTS
+        const allSubTextElements = el.getElementsByClassName('my-widget-type-text');
         allSubTextElements.forEach(e => {
             //e.text = mainEl.text ?? "shadow-text";        // Removed because text is set on useEl via config, and not on main
             //e.letterSpacing = mainEl.letterSpacing ?? 0;  // Removed because letter-spacing is set on useEl via config, and not on main
@@ -127,6 +127,7 @@ const construct = (el) => {
             } catch (e) {
                e.textAnchor = 'start';
             }*/
+            //console.log(`anchor=${elStyle.textAnchor}; spacing=${elStyle.letterSpacing}`);
             e.style.fontSize = elStyle.fontSize > 0 ? elStyle.fontSize : 30;   // because font-family is set on useEl; if fontSize is undefined its value is -32768
         });
     })();//IIFE

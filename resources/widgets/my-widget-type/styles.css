@@ -1,18 +1,14 @@
-.myText {
-    text-length: 20;
+.my-widget-type-text {
+  text-length: 20;
 }
 
-.main {
-    y: 0;
+.my-widget-type-main {
+  fill: white;
 }
 
-/*.main {
-    fill: white;
+.my-widget-type-shadow {
+  fill: #808080;
+  x: 5;
+  y: 5;
+  opacity: 0.5;
 }
-
-.shadow {
-    fill: #808080;
-    x: 5;
-    y: 5;
-    opacity: 0.5;
-}*/

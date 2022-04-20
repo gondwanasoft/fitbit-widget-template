@@ -1,10 +1,8 @@
 <svg>
-  <use id='my-widget-instance-1' href="#myWidgetType" class="small" x="5" y="100" font-family="FBNucleon-Black" font-size='30' fill="#ff0000" >
-    <set href="#config" attributeName="text-buffer" to="text: Gondwana; letter-spacing: 20;" />
+  <use id='my-widget-instance-1' href="#myWidgetType" class="my-widget-instance-big" x="50%" y="150" font-family="FBNucleon-Black"  >
+    <set href="#my-widget-type-config" attributeName="text-buffer" to="text: Gondwana; text-anchor: middle" />
   </use>
 
-  <use id='my-widget-instance-2' href="#myWidgetType" class="small" x="5" y="200" font-family="FBNucleon-Black" font-size='30' fill="#00ff00" />
-
+  <use id='my-widget-instance-2' href="#myWidgetType" class="my-widget-instance-small" x="50%" y="200" font-family="FBNucleon-Black" />
 </svg>
-<!-- TODO 3.0 rationalise class names and CSS -->
 <!-- TODO 3.9 standardise tabulation -->
