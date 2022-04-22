@@ -13,10 +13,10 @@ const construct = (el) => {
     let elStyle = el.style;   // keep a reference to the REAL .style because we're going to redefine .style
 
     //APPLY CHANGES ON EL TO ALL
+    // TODO 3.02 simplify/eliminate setNewTextAll()
     const setNewTextAll = (obj, prop) => {
         Object.defineProperty(obj, prop, {
-            set(newValue) {mainEl[prop] = shadowEl[prop] = newValue;},
-            enumerable: true
+            set(newValue) {mainEl[prop] = shadowEl[prop] = newValue;}
         });
     };
 
@@ -25,10 +25,10 @@ const construct = (el) => {
     setNewTextAll(el, 'letterSpacing');
 
     //APPLY TEXT-STYLE CHANGES TO ALL
+    // TODO 3.03 simplify/eliminate setNewStyleAll()
     const setNewStyleAll = (obj, prop) => {
         Object.defineProperty(obj, prop, {
-            set(newValue) {mainEl.style[prop] = shadowEl.style[prop] = newValue;},
-            enumerable: true
+            set(newValue) {mainEl.style[prop] = shadowEl.style[prop] = newValue;}
         });
     };
 
@@ -60,8 +60,7 @@ const construct = (el) => {
         constructor(styleBase) {
             super(styleBase);
             Object.defineProperty(this, 'fill', {
-                set(newValue) { styleBase.fill = newValue; },
-                enumerable: true
+                set(newValue) { styleBase.fill = newValue; }
             });
         }
     };
@@ -71,30 +70,27 @@ const construct = (el) => {
         getBBox: () => mainEl.getBBox()
     });
 
-    let effectsAPI = (obj) => Object.seal({
-        style: Object.seal(new StyleSubText(obj.style)),
-        set x(newValue) { obj.x = newValue; },
-        set y(newValue) { obj.y = newValue; },
-        enumerable: true
-    });
+  let shadowAPI = Object.seal({
+      style: Object.seal(new StyleSubText(shadowEl.style)),
+      // TODO 3.01 replace x,y with shadowX,Y or something as per circle cx,cy? First, see if x,y can be set on shadow in use/CSS.
+      set x(newValue) {shadowEl.x = newValue;},
+      set y(newValue) {shadowEl.y = newValue;}
+  });
 
     let widgetStyleAPI = Object.seal(new StyleWidget(elStyle));
 
-    Object.defineProperty(el, 'style', {  // we kept a reference to the real .style in elStyle
-        get() {
-            return widgetStyleAPI;
-        }
+    Object.defineProperty(el, 'style', {  // redefine style; we kept a reference to the real .style in elStyle
+        get() {return widgetStyleAPI;}
     });
 
-    // Exposes property and returns all values to owner
-    const defineProps = (prop, obj) => {
-        Object.defineProperty(el, prop, {
-            get() { return obj; }
-        });
-    };
+    // Define public properties (widget API):
+    Object.defineProperty(el, 'main', {
+      get() {return mainAPI;}
+    });
 
-    defineProps('main', mainAPI);
-    defineProps('shadow', effectsAPI(shadowEl));
+    Object.defineProperty(el, 'shadow', {
+      get() {return shadowAPI;}
+    });
 
     // INITIALISATION:
     (function () {
@@ -116,6 +112,7 @@ const construct = (el) => {
         });
 
         // DEFINES RELATIONS BETWEEN TEXT ELEMENTS
+        // TODO 3.05 simplify:
         const allSubTextElements = el.getElementsByClassName('my-widget-type-text');
         allSubTextElements.forEach(e => {
             //e.text = mainEl.text ?? "shadow-text";        // Removed because text is set on useEl via config, and not on main
@@ -130,11 +127,12 @@ const construct = (el) => {
             //console.log(`anchor=${elStyle.textAnchor}; spacing=${elStyle.letterSpacing}`);
             e.style.fontSize = elStyle.fontSize > 0 ? elStyle.fontSize : 30;   // because font-family is set on useEl; if fontSize is undefined its value is -32768
         });
-    })();//IIFE
+    })();   // IIFE
 
     return el;
 };
 
 constructWidgets('myWidgetType', construct);
-// TODO 3.1 reduce to minimal example elements, properties, etc
+// TODO 3.1 reduce to minimal example elements, properties, etc. Consider avoiding style.
 // TODO 3.2 comment out elements, properties, etc.
+// TODO 3.7 comments!
