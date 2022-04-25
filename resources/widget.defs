@@ -1,3 +1,4 @@
+<!-- This file is not a part of the widget template. It demonstrates how to use the sample widget code.-->
 <svg>
   <defs>
     <link rel="stylesheet" href="styles.css" />

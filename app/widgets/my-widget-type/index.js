@@ -153,5 +153,4 @@ const construct = (el) => {
 
 constructWidgets('myWidgetType', construct);
 
-// TODO 3.7 comments!
 // TODO 3.8 readme
