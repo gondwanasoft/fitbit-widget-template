@@ -1,3 +1,8 @@
+/* This file is not a part of the widget template. It demonstrates how to use the sample widget code. */
+
+/* TODO Widget styles can be defined or over-ridden in the clockface/app .css. */
+
+/* EXAMPLE
 .my-widget-instance-big {
   font-size: 60;
 }
@@ -23,3 +28,4 @@
   x: 4;
   y: 4;
 }
+*/

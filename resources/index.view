@@ -1,8 +1,12 @@
+<!-- This file is not a part of the widget template. It demonstrates how to use the sample widget code.-->
 <svg>
-  <use id='my-widget-instance-1' href="#myWidgetType" class="my-widget-instance-big" x="50%" y="150" font-family="FBNucleon-Black"  >
+  <!-- TODO In your <svg>, declare <use> elements for every instance of the widget that you need. -->
+  <!-- EXAMPLE
+  <use id='my-widget-instance-upper' href="#myWidgetType" class="my-widget-instance-big" x="50%" y="150" font-family="FBNucleon-Black"  >
     <set href="#my-widget-type-config" attributeName="text-buffer" to="text: Gondwana; text-anchor: middle" />
   </use>
 
-  <use id='my-widget-instance-2' href="#myWidgetType" class="my-widget-instance-small" x="50%" y="200" font-family="FBNucleon-Black" />
+  <use id='my-widget-instance-lower' href="#myWidgetType" class="my-widget-instance-small" x="50%" y="200" font-family="FBNucleon-Black" />
+  -->
 </svg>
-<!-- TODO 3.6 standardise tabulation -->
+<!-- TODO 3.6 standardise tabulation in all files -->

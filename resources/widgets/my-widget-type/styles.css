@@ -1,3 +1,6 @@
+/* TODO Define default styles (if any) for your widget. */
+
+/* EXAMPLE
 .my-widget-type-text {
   text-length: 20;
 }
@@ -12,3 +15,4 @@
   y: 5;
   opacity: 0.5;
 }
+ */
