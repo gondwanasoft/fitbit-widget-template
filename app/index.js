@@ -8,5 +8,3 @@ const myWidgetInstanceLower = document.getElementById('my-widget-instance-lower'
 myWidgetInstanceLower.text = 'Software';
 myWidgetInstanceLower.main.style.fill = 'green';
 */
-
-// TODO 3.5 create host project and widget project?
