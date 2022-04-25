@@ -6,8 +6,9 @@
 
     <symbol id="myWidgetType" x="0" y="0" type="myWidgetType" >
         <!-- TODO Add class="widget-manual" to the symbol if you don't want widget instances to be constructed automatically. -->
+        <!-- TODO Declare one or more SVG elements. They can be different element types. -->
         <text id="my-widget-type-shadow" class="my-widget-type-text my-widget-type-shadow" />
         <text id="my-widget-type-main" class="my-widget-type-text my-widget-type-main" x="0" y="0" />
-        <text id="my-widget-type-config" display="none" text-length="50" />
+        <text id="my-widget-type-config" display="none" text-length="50" />     <!-- TODO Don't include a config element unless you need it for SVG/CSS declarations -->
     </symbol>
 </defs>
