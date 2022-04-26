@@ -23,7 +23,7 @@ export const constructWidgets = (widgetType, construct) => {
 
 export const parseConfig = (el, callback) => {
   // Calls callback with {name:attributeName, value:attributeValue} for every value found in el's config element.
-  const config = el.getElementById('my-widget-type-config').text; // TODO 2 need to use standard id for config, or make it a parameter
+  const config = el.getElementById('config').text;
   if (config === "") return;
 
   const attributes = config.split(';');

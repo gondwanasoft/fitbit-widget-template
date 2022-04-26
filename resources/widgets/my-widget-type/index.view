@@ -2,7 +2,8 @@
   <link rel="stylesheet" href="styles.css" />     <!-- TODO If your widget doesn't include any default styles, you can delete this. -->
 
   <!-- Note: id and class names used here are prefixed by the widget type name to reduce the chance of ambiguous CSS.
-       You don't have use this convention, but if you don't, be careful that your CSS selectors aren't too greedy. -->
+       You don't have use this convention, but if you don't, be careful that your CSS selectors aren't too greedy.
+       Take particular care with the config element (if used), since that id may also be used by other widget types. -->
 
   <symbol id="myWidgetType" x="0" y="0" type="myWidgetType" >
     <!-- TODO Add class="widget-manual" to the symbol if you don't want widget instances to be constructed automatically. -->
@@ -11,6 +12,6 @@
     <text id="my-widget-type-shadow" class="my-widget-type-text my-widget-type-shadow" />
     <text id="my-widget-type-main" class="my-widget-type-text my-widget-type-main" x="0" y="0" />
     -->
-    <text id="my-widget-type-config" display="none" text-length="50" />      <!-- TODO Don't include a config element unless you need it for SVG/CSS declarations -->
+    <text id="config" display="none" text-length="50" />      <!-- TODO Don't include a config element unless you need it for SVG/CSS declarations -->
   </symbol>
 </defs>

@@ -36,7 +36,7 @@ Before they can be used, widgets need to be constructed (see `app/widgets/my-wid
 
 The framework provided here normally initiates construction of all widget instances when the clockface/app starts. This is usually preferable and allows widgets to be used very similarly to built-in Fitbit SVG elements and components.
 
-Automatic construction may be undesirable if the SVG document is large and/or different SVG documents are dynamically loaded at runtime. Including the style `widget-manual` in the widget template or instances will prevent automatic construction. At present, no method is provided to perform on-demand widget construction (*coming soon*).
+Automatic construction may be undesirable if the SVG document is large and/or if different SVG documents are dynamically loaded at runtime. Including the style `widget-manual` in the widget template or instances will prevent automatic construction. At present, no method is provided to perform on-demand widget construction (*coming soon*).
 
 ## `config` Element
 

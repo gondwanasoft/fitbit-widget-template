@@ -20,7 +20,7 @@
   font-size: 30;
 }
 
-.my-widget-instance-small #my-widget-type-config {
+.my-widget-instance-small #config {
   text-buffer: "letter-spacing: 20; text-anchor: middle"
 }
 

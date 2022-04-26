@@ -3,7 +3,7 @@
   <!-- TODO In your <svg>, declare <use> elements for every instance of the widget that you need. -->
   <!-- EXAMPLE
   <use id='my-widget-instance-upper' href="#myWidgetType" class="my-widget-instance-big" x="50%" y="150" font-family="FBNucleon-Black"  >
-    <set href="#my-widget-type-config" attributeName="text-buffer" to="text: Gondwana; text-anchor: middle" />
+    <set href="#config" attributeName="text-buffer" to="text: Gondwana; text-anchor: middle" />
   </use>
 
   <use id='my-widget-instance-lower' href="#myWidgetType" class="my-widget-instance-small" x="50%" y="200" font-family="FBNucleon-Black" />
