@@ -2,7 +2,7 @@
 import document from 'document'
 import './widgets/my-widget-type'
 
-// TODO Unless your widgets are static, include code in your clockface/app .js to manipulate them.
+// TODO 15 Unless your widgets are static, include code in your clockface/app .js to manipulate them.
 /* EXAMPLE
 const myWidgetInstanceLower = document.getElementById('my-widget-instance-lower');
 myWidgetInstanceLower.text = 'Software';

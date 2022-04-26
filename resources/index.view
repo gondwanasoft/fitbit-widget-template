@@ -1,6 +1,6 @@
 <!-- This file is not a part of the widget template. It demonstrates how to use the sample widget code.-->
 <svg>
-  <!-- TODO In your <svg>, declare <use> elements for every instance of the widget that you need. -->
+  <!-- TODO 13 In your <svg>, declare <use> elements for every instance of the widget that you need. -->
   <!-- EXAMPLE
   <use id='my-widget-instance-upper' href="#myWidgetType" class="my-widget-instance-big" x="50%" y="150" font-family="FBNucleon-Black"  >
     <set href="#config" attributeName="text-buffer" to="text: Gondwana; text-anchor: middle" />

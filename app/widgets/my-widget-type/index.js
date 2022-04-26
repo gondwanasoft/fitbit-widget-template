@@ -1,12 +1,12 @@
-// TODO Rename my-widget-type (directory names and all references in code files) to something appropriate for your widget.
-// TODO Rename myWidgetType (in all code files) to something appropriate for your widget.
+// TODO 1 Rename my-widget-type (directory names and all references in code files) to something appropriate for your widget.
+// TODO 2 Rename myWidgetType (in all code files) to something appropriate for your widget.
 
-import { constructWidgets, parseConfig } from "../construct-widgets";   // TODO Don't import parseConfig if you don't use a config element in your widget.
+import { constructWidgets, parseConfig } from "../construct-widgets";   // TODO 6 Don't import parseConfig if you don't use a config element in your widget.
 
 const construct = (el) => {
   // el: the element object returned by getElementsByTypeName().
 
-  // TODO Define private variables and functions, and public properties and methods, for your widget.
+  // TODO 10 Define private variables and functions, and public properties and methods, for your widget.
   /* EXAMPLE
   // Get references to the widget's child elements that we'll need to manipulate:
   const mainEl = el.getElementById('my-widget-type-main');
@@ -117,13 +117,13 @@ const construct = (el) => {
   (function () {    // we use an IIFE so that its memory can be freed after execution
 
     // Parse and process any attributes specified in the config element.
-    // TODO If your widget doesn't use config, don't include the call to parseConfig() below.
+    // TODO 7 If your widget doesn't use config, remove the call to parseConfig() below.
     parseConfig(el, attribute => {
       // This anonymous function is called for every attribute in config.
       // attribute is {name:attributeName, value:attributeValue}
       switch(attribute.name) {
         // Names don't have to be standard Fitbit or CSS strings; you can make up your own names.
-        // TODO If you use config, define cases to handle the attributes.
+        // TODO 11 If you use config, define cases to handle the attributes.
         /* EXAMPLE
         case 'text':
           el.text = attribute.value;   // this won't like embedded semi-colons, and quotes will require care
@@ -138,7 +138,7 @@ const construct = (el) => {
       }
     });
 
-    // TODO Perform any other necessary initialisation; eg, responding to SVG/CSS attributes/styles.
+    // TODO 12 Perform any other necessary initialisation; eg, responding to SVG/CSS attributes/styles.
     /* EXAMPLE
     // Apply styles set on <use> element to text elements:
     [mainEl, shadowEl].forEach(e => {
