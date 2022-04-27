@@ -105,7 +105,7 @@ Properties applicable to widget `.shadow` object in `.js`:
 - `x`, `y`
 - `style`
 
-Properties applicable to widget `.main.style` and `.main.shadow` objects in `.js`:
+Properties applicable to widget `.main.style` and `.shadow.style` objects in `.js`:
 - `opacity`
 - `display`
 - `fill`
