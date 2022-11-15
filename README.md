@@ -31,15 +31,15 @@ Before coding, decide:
 
 Populate the framework provided here with code for your widget. Here's a suggested order (numbers correspond to TODO comments):
 
-- 1 Rename my-widget-type (directory names and all references in code files) to something appropriate for your widget.
-- 2 Rename myWidgetType (in all code files) to something appropriate for your widget.
-- 3 Add `class="widget-manual"` to the symbol if you don't want widget instances to be constructed automatically (see note below).
-- 4 Declare one or more SVG elements. They can be different element types.
-- 5 Don't include a `config` element unless you need it for SVG/CSS declarations.
-- 6 Don't import `parseConfig` if you don't use a `config` element in your widget.
-- 7 If your widget doesn't use `config`, remove the call to `parseConfig()`.
-- 8 If your widget doesn't include any default styles, delete the link to its CSS file.
-- 9 Define default styles (if any) for your widget.
+- 01 Rename my-widget-type (directory names and all references in code files) to something appropriate for your widget.
+- 02 Rename myWidgetType (in all code files) to something appropriate for your widget.
+- 03 Add `class="widget-manual"` to the symbol if you don't want widget instances to be constructed automatically (see note below).
+- 04 Declare one or more SVG elements. They can be different element types.
+- 05 Don't include a `config` element unless you need it for SVG/CSS declarations.
+- 06 Don't import `parseConfig` if you don't use a `config` element in your widget.
+- 07 If your widget doesn't use `config`, remove the call to `parseConfig()`.
+- 08 If your widget doesn't include any default styles, delete the link to its CSS file.
+- 09 Define default styles (if any) for your widget.
 - 10 Define private variables and functions, and public properties and methods, for your widget.
 - 11 If you use `config`, define cases to handle the attributes.
 - 12 Perform any other necessary initialisation; *eg*, responding to SVG/CSS attributes/styles.
@@ -118,7 +118,7 @@ If you develop a widget that's free for other developers to use, please consider
 
 For help with widget development, post in the [Fitbit SDK forum](https://community.fitbit.com/t5/SDK-Development/bd-p/sdk) or [Discord](https://discord.com/channels/355793206182412290/799557720758943754).
 
-## Acknowledgement and Other Examples
+## Acknowledgements and Other Examples
 
 The approach to widget creation presented here was developed collaboratively between [BarbWire](https://github.com/BarbWire-1) and Gondwana Software, with input from [Sergio Morchón Poveda](https://github.com/SergioMorchon).
 

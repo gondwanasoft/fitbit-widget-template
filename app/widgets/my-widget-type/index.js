@@ -1,7 +1,7 @@
-// TODO 1 Rename my-widget-type (directory names and all references in code files) to something appropriate for your widget.
-// TODO 2 Rename myWidgetType (in all code files) to something appropriate for your widget.
+// TODO 01 Rename my-widget-type (directory names and all references in code files) to something appropriate for your widget.
+// TODO 02 Rename myWidgetType (in all code files) to something appropriate for your widget.
 
-import { constructWidgets, parseConfig } from "../construct-widgets";   // TODO 6 Don't import parseConfig if you don't use a config element in your widget.
+import { constructWidgets, parseConfig } from "../construct-widgets";   // TODO 06 Don't import parseConfig if you don't use a config element in your widget.
 
 const construct = (el) => {
   // el: the element object returned by getElementsByTypeName().
@@ -117,7 +117,7 @@ const construct = (el) => {
   (function () {    // we use an IIFE so that its memory can be freed after execution
 
     // Parse and process any attributes specified in the config element.
-    // TODO 7 If your widget doesn't use config, remove the call to parseConfig() below.
+    // TODO 07 If your widget doesn't use config, remove the call to parseConfig() below.
     parseConfig(el, attribute => {
       // This anonymous function is called for every attribute in config.
       // attribute is {name:attributeName, value:attributeValue}
